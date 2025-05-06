@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+#    network_mode: "host"
+    # Or build it locally:
+    # build: ./path-to-your-app
+
